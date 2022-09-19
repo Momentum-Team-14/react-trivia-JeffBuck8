@@ -13,6 +13,19 @@ button {
   font-size: 12px;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.cat-list {
+  text-align: center;
+  display: grid ;
+}
+
 body {
   background-color: teal;
 }
