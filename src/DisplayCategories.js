@@ -3,7 +3,6 @@ import { useState } from 'react'
 import axios from 'axios'
 
 export const DisplayCategories = ({setCatID}) => {
-    // tracks all the categories that can be selected
     const [categories, setCategories] = useState([])
 
     useEffect(() => {

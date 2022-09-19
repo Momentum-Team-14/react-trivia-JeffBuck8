@@ -4,10 +4,8 @@ import { DisplayFeedback } from './DisplayFeeback'
 
 export const DisplayQuestion = ({setCatID, questIndex, setQuestIndex, score, setScore, questions, category}) => {
 
-    // tracks whether question has been answered to display feedback
     const [feedback, setFeedback] = useState(false)
 
-    // Fixes questions text output
     const htmlDecode = input => new DOMParser()
         .parseFromString(input, "text/html")
         .documentElement.textContent
@@ -19,15 +17,14 @@ export const DisplayQuestion = ({setCatID, questIndex, setQuestIndex, score, set
     options=[...questions[questIndex].incorrect_answers,questions[questIndex].correct_answer]
     let shuffleOptions = _.shuffle(options)
 
-    // tracks whether user answers question correctly
+
     let status = ''
 
-    // Determines what happens to states when clicking a correct/incorrect answer option
+
     const handleClick = (answer) => {
         if (answer === 'correct') {
             setScore(score+1)
         }
-        // setQuestIndex(questIndex+1)
     }
 
     return(
